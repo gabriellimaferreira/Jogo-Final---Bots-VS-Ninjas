@@ -1,0 +1,248 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://fase1.gd" type="Script" id=1]
+[ext_resource path="res://cenario.tres" type="TileSet" id=2]
+[ext_resource path="res://Sprites Cenário/BG.jpg" type="Texture" id=3]
+[ext_resource path="res://Sprites Cenário/png/Objects/DoorOpen.png" type="Texture" id=4]
+[ext_resource path="res://Áudios/Arcade Player - Old Town Road (16-Bit Lil Nas X & Billy Ray Cyrus Emulation).ogg" type="AudioStream" id=5]
+[ext_resource path="res://acido.tscn" type="PackedScene" id=6]
+[ext_resource path="res://espinho.tscn" type="PackedScene" id=7]
+[ext_resource path="res://inimigo2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://inimigo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://robo.tscn" type="PackedScene" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 106.47, 51.7082 )
+
+[node name="fase1" type="Node2D" index="0"]
+
+position = Vector2( 2, 0 )
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+position = Vector2( -2744.74, 24.3913 )
+scale = Vector2( 0.4, 0.4 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 256, 256 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -982908, 17, 0, -917372, 17, 0, -851948, 17, 0, -851836, 17, 0, -786412, 17, 0, -786300, 17, 0, -720876, 17, 0, -720764, 17, 0, -655340, 17, 0, -655228, 17, 0, -589804, 17, 0, -589692, 17, 0, -524268, 17, 0, -524156, 17, 0, -458732, 17, 0, -458620, 17, 0, -393196, 17, 0, -393084, 17, 0, -327660, 17, 0, -327548, 17, 0, -262124, 17, 0, -262012, 17, 0, -196588, 17, 0, -196476, 17, 0, -131052, 17, 0, -130940, 17, 0, -65516, 17, 0, -65404, 17, 0, 20, 17, 0, 132, 17, 0, 65556, 17, 0, 65668, 17, 0, 131092, 17, 0, 131204, 17, 0, 196628, 17, 0, 196659, 24, 0, 196662, 24, 0, 196665, 24, 0, 196668, 24, 0, 196740, 17, 0, 262164, 17, 0, 262276, 17, 0, 327700, 22, 0, 327701, 22, 0, 327702, 22, 0, 327703, 22, 0, 327704, 22, 0, 327705, 22, 0, 327706, 22, 0, 327707, 22, 0, 327708, 22, 0, 327709, 22, 0, 327710, 22, 0, 327711, 22, 0, 327712, 22, 0, 327713, 22, 0, 327714, 22, 0, 327715, 22, 0, 327716, 22, 0, 327717, 22, 0, 327718, 22, 0, 327719, 22, 0, 327720, 22, 0, 327721, 22, 0, 327722, 22, 0, 327723, 22, 0, 327724, 17, 0, 327728, 17, 0, 327729, 22, 0, 327730, 22, 0, 327731, 22, 0, 327732, 22, 0, 327733, 22, 0, 327734, 22, 0, 327735, 22, 0, 327736, 22, 0, 327737, 22, 0, 327738, 22, 0, 327739, 22, 0, 327740, 22, 0, 327741, 22, 0, 327742, 22, 0, 327743, 22, 0, 327744, 22, 0, 327745, 22, 0, 327746, 22, 0, 327747, 22, 0, 327748, 22, 0, 327749, 22, 0, 327750, 22, 0, 327751, 22, 0, 327752, 22, 0, 327753, 22, 0, 327754, 22, 0, 327755, 22, 0, 327756, 22, 0, 327757, 22, 0, 327758, 22, 0, 327759, 22, 0, 327760, 22, 0, 327761, 22, 0, 327762, 22, 0, 327763, 22, 0, 327764, 22, 0, 327765, 22, 0, 327766, 22, 0, 327767, 22, 0, 327768, 22, 0, 327769, 22, 0, 327770, 22, 0, 327771, 22, 0, 327772, 22, 0, 327773, 22, 0, 327774, 22, 0, 327775, 22, 0, 327776, 22, 0, 327777, 17, 0, 327780, 17, 0, 327781, 22, 0, 327782, 22, 0, 327783, 22, 0, 327784, 22, 0, 327785, 22, 0, 327786, 22, 0, 327787, 22, 0, 327788, 22, 0, 327789, 22, 0, 327790, 22, 0, 327791, 22, 0, 327792, 22, 0, 327793, 22, 0, 327794, 17, 0, 327800, 17, 0, 327801, 22, 0, 327802, 22, 0, 327803, 22, 0, 327804, 22, 0, 327805, 22, 0, 327806, 22, 0, 327807, 22, 0, 327808, 22, 0, 327809, 22, 0, 327810, 22, 0, 327811, 22, 0, 327812, 22, 0, 393260, 17, 0, 393264, 17, 0, 393313, 17, 0, 393316, 17, 0, 393330, 17, 0, 393336, 17, 0, 458796, 17, 0, 458797, 17, 0, 458798, 17, 0, 458799, 17, 0, 458800, 17, 0, 458849, 17, 0, 458850, 17, 0, 458851, 17, 0, 458852, 17, 0, 458866, 17, 0, 458867, 17, 0, 458868, 17, 0, 458869, 17, 0, 458870, 17, 0, 458871, 17, 0, 458872, 17, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="1"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+position = Vector2( 33.6187, 93.5141 )
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1800, 1100 )
+_sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+position = Vector2( 554.916, 258.702 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="door1" type="Area2D" parent="." index="2"]
+
+position = Vector2( 10716.4, 442.267 )
+scale = Vector2( 0.4, 0.4 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="door1" index="0"]
+
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door1" index="1"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="acido1" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 1915.39, 587.891 )
+
+[node name="acido2" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 2017.86, 587.585 )
+
+[node name="acido3" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 2119.44, 586.771 )
+
+[node name="acido4" parent="." index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 7343.07, 587.37 )
+
+[node name="acido5" parent="." index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 7442.29, 586.319 )
+
+[node name="acido6" parent="." index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 9084.83, 586.664 )
+
+[node name="acido7" parent="." index="10" instance=ExtResource( 6 )]
+
+position = Vector2( 9186.6, 586.841 )
+
+[node name="acido8" parent="." index="11" instance=ExtResource( 6 )]
+
+position = Vector2( 9389.81, 587.436 )
+
+[node name="acido11" parent="." index="12" instance=ExtResource( 6 )]
+
+position = Vector2( 9287.32, 586.943 )
+
+[node name="acido9" parent="." index="13" instance=ExtResource( 6 )]
+
+position = Vector2( 9492.26, 587.826 )
+
+[node name="espinho1" parent="." index="14" instance=ExtResource( 7 )]
+
+position = Vector2( 2183.94, 209.578 )
+
+[node name="espinho2" parent="." index="15" instance=ExtResource( 7 )]
+
+position = Vector2( 2282.16, 209.578 )
+
+[node name="espinho3" parent="." index="16" instance=ExtResource( 7 )]
+
+position = Vector2( 2379.15, 209.578 )
+
+[node name="espinho4" parent="." index="17" instance=ExtResource( 7 )]
+
+position = Vector2( 2476.27, 209.578 )
+
+[node name="espinho5" parent="." index="18" instance=ExtResource( 7 )]
+
+position = Vector2( 2572.04, 209.578 )
+
+[node name="espinho6" parent="." index="19" instance=ExtResource( 7 )]
+
+position = Vector2( 2667.67, 209.578 )
+
+[node name="espinho7" parent="." index="20" instance=ExtResource( 7 )]
+
+position = Vector2( 2764.79, 210.938 )
+
+[node name="espinho8" parent="." index="21" instance=ExtResource( 7 )]
+
+position = Vector2( 2860.55, 210.938 )
+
+[node name="espinho9" parent="." index="22" instance=ExtResource( 7 )]
+
+position = Vector2( 2953.99, 210.938 )
+
+[node name="espinho10" parent="." index="23" instance=ExtResource( 7 )]
+
+position = Vector2( 3050.17, 210.938 )
+
+[node name="espinho11" parent="." index="24" instance=ExtResource( 7 )]
+
+position = Vector2( 1152.75, 208.257 )
+
+[node name="espinho12" parent="." index="25" instance=ExtResource( 7 )]
+
+position = Vector2( 629.856, 208.257 )
+
+[node name="espinho13" parent="." index="26" instance=ExtResource( 7 )]
+
+position = Vector2( 6052.4, 210.247 )
+
+[node name="espinho14" parent="." index="27" instance=ExtResource( 7 )]
+
+position = Vector2( 6571.96, 210.248 )
+
+[node name="espinho15" parent="." index="28" instance=ExtResource( 7 )]
+
+position = Vector2( 7823.34, 209.126 )
+
+[node name="espinho16" parent="." index="29" instance=ExtResource( 7 )]
+
+position = Vector2( 8270.94, 210.408 )
+
+[node name="inimigoD1" parent="." index="30" instance=ExtResource( 8 )]
+
+position = Vector2( -265.084, 39.2961 )
+
+[node name="inimigoE1" parent="." index="31" instance=ExtResource( 9 )]
+
+position = Vector2( -1011.35, 38.1526 )
+
+[node name="inimigoE2" parent="." index="32" instance=ExtResource( 9 )]
+
+position = Vector2( 3773.24, 38.3708 )
+
+[node name="inimigoE3" parent="." index="33" instance=ExtResource( 9 )]
+
+position = Vector2( 4749.83, 30.3345 )
+
+[node name="bot" parent="." index="34" instance=ExtResource( 10 )]
+
+position = Vector2( -2.05913, 7.66508 )
+
+[connection signal="body_entered" from="door1" to="." method="_on_door1_body_entered"]
+
+

@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://tiror.gd" type="Script" id=1]
+[ext_resource path="res://Sprites Robô/png/Objects/Bullet_000.png" type="Texture" id=2]
+[ext_resource path="res://Sprites Robô/png/Objects/Bullet_001.png" type="Texture" id=3]
+[ext_resource path="res://Sprites Robô/png/Objects/Bullet_002.png" type="Texture" id=4]
+[ext_resource path="res://Sprites Robô/png/Objects/Bullet_003.png" type="Texture" id=5]
+[ext_resource path="res://Sprites Robô/png/Objects/Bullet_004.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "bullet",
+"speed": 15.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 49.8489
+height = 20.0
+
+[node name="Node2D" type="Node2D"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="tiror" type="Area2D" parent="." index="0"]
+
+position = Vector2( -1.756, -0.544651 )
+scale = Vector2( 0.2, 0.2 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="tiror" index="0"]
+
+frames = SubResource( 1 )
+animation = "bullet"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tiror" index="1"]
+
+position = Vector2( 15.6203, 2.43462 )
+scale = Vector2( 1.29556, 0.961262 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="body_entered" from="tiror" to="tiror" method="_on_tiror_body_entered"]
+
+

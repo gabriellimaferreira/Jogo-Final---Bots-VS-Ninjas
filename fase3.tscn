@@ -1,0 +1,218 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://fase3.gd" type="Script" id=1]
+[ext_resource path="res://cenario.tres" type="TileSet" id=2]
+[ext_resource path="res://robo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites Cenário/BG.jpg" type="Texture" id=4]
+[ext_resource path="res://Sprites Cenário/png/Objects/DoorOpen.png" type="Texture" id=5]
+[ext_resource path="res://mola.tscn" type="PackedScene" id=6]
+[ext_resource path="res://inimigo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://inimigo2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://espinho.tscn" type="PackedScene" id=9]
+[ext_resource path="res://inimigo3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Sprites Cenário/png/Objects/DoorLocked.png" type="Texture" id=11]
+[ext_resource path="res://Áudios/Arcade Player - Old Town Road (16-Bit Lil Nas X & Billy Ray Cyrus Emulation).ogg" type="AudioStream" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 106.47, 51.7082 )
+
+[node name="fase3" type="Node2D" index="0"]
+
+position = Vector2( 2, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+position = Vector2( -1426.52, 8.16043 )
+scale = Vector2( 0.4, 0.4 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 256, 256 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -4521925, 17, 0, -4521924, 17, 0, -4521923, 17, 0, -4521922, 17, 0, -4521921, 17, 0, -4521920, 17, 0, -4521919, 17, 0, -4521918, 17, 0, -4521917, 17, 0, -4521916, 17, 0, -4521915, 17, 0, -4521914, 17, 0, -4521913, 17, 0, -4521912, 17, 0, -4521911, 17, 0, -4521910, 17, 0, -4521909, 17, 0, -4521908, 17, 0, -4521907, 17, 0, -4521906, 17, 0, -4521905, 17, 0, -4521904, 17, 0, -4456389, 17, 0, -4456368, 17, 0, -4390853, 17, 0, -4390832, 17, 0, -4325317, 17, 0, -4325296, 17, 0, -4259781, 17, 0, -4259760, 17, 0, -4194245, 17, 0, -4194224, 17, 0, -4128723, 17, 0, -4128722, 17, 0, -4128721, 17, 0, -4128720, 17, 0, -4128719, 17, 0, -4128718, 17, 0, -4128717, 17, 0, -4128716, 17, 0, -4128715, 17, 0, -4128714, 17, 0, -4128713, 17, 0, -4128712, 17, 0, -4128711, 17, 0, -4128710, 17, 0, -4128709, 17, 0, -4128688, 17, 0, -4063187, 17, 0, -4063152, 17, 0, -3997651, 17, 0, -3997616, 17, 0, -3932115, 17, 0, -3932080, 17, 0, -3866579, 17, 0, -3866551, 17, 0, -3866550, 17, 0, -3866549, 17, 0, -3866548, 17, 0, -3866547, 17, 0, -3866546, 17, 0, -3866545, 17, 0, -3866544, 17, 0, -3801043, 17, 0, -3801015, 17, 0, -3735507, 17, 0, -3735479, 17, 0, -3669971, 17, 0, -3669943, 17, 0, -3604435, 17, 0, -3604407, 17, 0, -3538899, 17, 0, -3538871, 17, 0, -3473363, 17, 0, -3473335, 17, 0, -3407827, 17, 0, -3407799, 17, 0, -3342318, 17, 0, -3342291, 17, 0, -3342263, 17, 0, -3276782, 17, 0, -3276755, 17, 0, -3276727, 17, 0, -3211246, 17, 0, -3211227, 16, 0, -3211226, 16, 0, -3211225, 16, 0, -3211224, 16, 0, -3211223, 16, 0, -3211222, 16, 0, -3211221, 16, 0, -3211220, 16, 0, -3211219, 17, 0, -3211191, 17, 0, -3145710, 17, 0, -3145691, 16, 0, -3145655, 17, 0, -3080174, 17, 0, -3080155, 16, 0, -3080131, 17, 0, -3080130, 17, 0, -3080129, 17, 0, -3080128, 17, 0, -3080127, 17, 0, -3080126, 17, 0, -3080125, 17, 0, -3080124, 17, 0, -3080123, 17, 0, -3080122, 17, 0, -3080121, 17, 0, -3080120, 17, 0, -3080119, 17, 0, -3014638, 17, 0, -3014619, 16, 0, -3014598, 17, 0, -3014597, 17, 0, -3014596, 17, 0, -3014595, 17, 0, -2949102, 17, 0, -2949083, 16, 0, -2949063, 17, 0, -2949062, 17, 0, -2883566, 17, 0, -2883547, 16, 0, -2883542, 17, 0, -2883541, 17, 0, -2883540, 17, 0, -2883534, 17, 0, -2883533, 17, 0, -2883532, 17, 0, -2883531, 17, 0, -2883530, 17, 0, -2883529, 17, 0, -2883528, 17, 0, -2883527, 17, 0, -2818030, 17, 0, -2818011, 16, 0, -2818006, 16, 0, -2818004, 17, 0, -2818003, 17, 0, -2818002, 17, 0, -2818001, 17, 0, -2818000, 17, 0, -2817999, 17, 0, -2817998, 17, 0, -2752494, 17, 0, -2752475, 16, 0, -2752470, 16, 0, -2686958, 17, 0, -2686939, 16, 0, -2686934, 16, 0, -2621422, 17, 0, -2621403, 16, 0, -2621398, 16, 0, -2555886, 17, 0, -2555867, 16, 0, -2555862, 16, 0, -2490350, 17, 0, -2490331, 16, 0, -2490326, 16, 0, -2424814, 17, 0, -2424795, 16, 0, -2424790, 16, 0, -2359278, 17, 0, -2359259, 16, 0, -2359254, 16, 0, -2293742, 17, 0, -2293723, 16, 0, -2293718, 16, 0, -2228212, 17, 0, -2228211, 17, 0, -2228210, 17, 0, -2228209, 17, 0, -2228208, 17, 0, -2228207, 17, 0, -2228206, 17, 0, -2228187, 16, 0, -2228182, 16, 0, -2162676, 17, 0, -2162651, 16, 0, -2162646, 16, 0, -2097140, 17, 0, -2097115, 16, 0, -2097110, 16, 0, -2031604, 17, 0, -2031579, 16, 0, -2031574, 16, 0, -1966068, 17, 0, -1966043, 16, 0, -1966038, 16, 0, -1900532, 17, 0, -1900502, 16, 0, -1834996, 17, 0, -1834966, 16, 0, -1769460, 17, 0, -1769455, 17, 0, -1769454, 17, 0, -1769453, 17, 0, -1769452, 17, 0, -1769451, 17, 0, -1769450, 17, 0, -1769449, 17, 0, -1769448, 17, 0, -1769447, 17, 0, -1769446, 17, 0, -1769445, 17, 0, -1769444, 17, 0, -1769443, 17, 0, -1769442, 17, 0, -1769441, 17, 0, -1769440, 17, 0, -1769439, 17, 0, -1769438, 17, 0, -1769437, 17, 0, -1769436, 17, 0, -1769435, 17, 0, -1769434, 17, 0, -1769433, 17, 0, -1769432, 17, 0, -1769431, 17, 0, -1769430, 16, 0, -1703924, 17, 0, -1703919, 17, 0, -1638388, 17, 0, -1638383, 17, 0, -1572852, 17, 0, -1572847, 17, 0, -1507316, 17, 0, -1507311, 17, 0, -1441780, 17, 0, -1441775, 17, 0, -1376244, 17, 0, -1376239, 17, 0, -1310708, 17, 0, -1310703, 17, 0, -1245172, 17, 0, -1245167, 17, 0, -1179636, 17, 0, -1179631, 17, 0, -1114100, 17, 0, -1114095, 17, 0, -1048564, 17, 0, -1048559, 17, 0, -983028, 17, 0, -983023, 17, 0, -917492, 17, 0, -917487, 17, 0, -851956, 17, 0, -851951, 17, 0, -786420, 17, 0, -786415, 17, 0, -720884, 17, 0, -720879, 17, 0, -655348, 17, 0, -655343, 17, 0, -589812, 17, 0, -589807, 17, 0, -524276, 17, 0, -524271, 17, 0, -458740, 17, 0, -458735, 17, 0, -393204, 17, 0, -393199, 17, 0, -327668, 17, 0, -327663, 17, 0, -262132, 17, 0, -262127, 17, 0, -196596, 17, 0, -196591, 17, 0, -131060, 17, 0, -131055, 17, 0, -65524, 17, 0, -65519, 17, 0, 12, 17, 0, 17, 17, 0, 65548, 17, 0, 65553, 17, 0, 131084, 17, 0, 131089, 17, 0, 196620, 17, 0, 196625, 17, 0, 262156, 17, 0, 262161, 17, 0, 327692, 17, 0, 327693, 22, 0, 327694, 22, 0, 327695, 22, 0, 327696, 22, 0, 327697, 22, 0, 393228, 17, 0, 458764, 17, 0, 524300, 17, 0, 589836, 17, 0, 655372, 17, 0, 720908, 17, 0, 786444, 17, 0, 851980, 17, 0, 917516, 17, 0, 983052, 17, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="bot" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -39.4509, -9.52264 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1800, 1100 )
+_sections_unfolded = [ "Motion" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+position = Vector2( 554.916, 258.702 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="door3" type="Area2D" parent="." index="3"]
+
+position = Vector2( 6706.2, -6127.55 )
+scale = Vector2( 0.4, 0.4 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="door3" index="0"]
+
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door3" index="1"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Node2D" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( -40.2805, 360.007 )
+
+[node name="Node2D2" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 263.049, -658.906 )
+
+[node name="Node2D3" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( -42.2902, -1683.06 )
+
+[node name="Node2D4" parent="." index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 2831.09, -2914.55 )
+
+[node name="Node2D5" parent="." index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 2515.82, -3739 )
+
+[node name="Node2D13" parent="." index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 5192.82, -4937.19 )
+
+[node name="Node2D15" parent="." index="10" instance=ExtResource( 6 )]
+
+position = Vector2( 5362.59, -5733.45 )
+
+[node name="ninjaE1" parent="." index="11" instance=ExtResource( 7 )]
+
+position = Vector2( -53.1117, -3253.39 )
+
+[node name="ninjaE2" parent="." index="12" instance=ExtResource( 7 )]
+
+position = Vector2( 596.844, -3253.39 )
+
+[node name="ninjaE3" parent="." index="13" instance=ExtResource( 7 )]
+
+position = Vector2( 1366.75, -3253.39 )
+
+[node name="ninjaD1" parent="." index="14" instance=ExtResource( 8 )]
+
+position = Vector2( 273.023, -3254.64 )
+
+[node name="ninjaD2" parent="." index="15" instance=ExtResource( 8 )]
+
+position = Vector2( 864.399, -3251.85 )
+
+[node name="ninjaD3" parent="." index="16" instance=ExtResource( 8 )]
+
+position = Vector2( 1143.35, -3254.64 )
+
+[node name="Node2D6" parent="." index="17" instance=ExtResource( 9 )]
+
+position = Vector2( 2752.41, -4724.96 )
+
+[node name="Node2D7" parent="." index="18" instance=ExtResource( 9 )]
+
+position = Vector2( 2852.89, -4724.96 )
+
+[node name="Node2D8" parent="." index="19" instance=ExtResource( 9 )]
+
+position = Vector2( 2951.32, -4724.96 )
+
+[node name="Node2D9" parent="." index="20" instance=ExtResource( 9 )]
+
+position = Vector2( 3357.32, -4825.44 )
+
+[node name="Node2D10" parent="." index="21" instance=ExtResource( 9 )]
+
+position = Vector2( 3666.96, -4825.44 )
+
+[node name="Node2D11" parent="." index="22" instance=ExtResource( 9 )]
+
+position = Vector2( 4188.09, -5031.88 )
+
+[node name="Node2D12" parent="." index="23" instance=ExtResource( 9 )]
+
+position = Vector2( 4590.89, -5135.09 )
+
+[node name="Node2D14" parent="." index="24" instance=ExtResource( 10 )]
+
+position = Vector2( 4866.58, -5783.95 )
+
+[node name="Sprite" type="Sprite" parent="." index="25"]
+
+position = Vector2( 256.635, 428.087 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="26"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[connection signal="body_entered" from="door3" to="." method="_on_door3_body_entered"]
+
+

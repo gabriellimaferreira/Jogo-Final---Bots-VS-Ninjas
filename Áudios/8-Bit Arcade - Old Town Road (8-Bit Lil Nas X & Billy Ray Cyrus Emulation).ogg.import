@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/8-Bit Arcade - Old Town Road (8-Bit Lil Nas X & Billy Ray Cyrus Emulation).ogg-74ad19c37784fa3a97904e9f5ba1e36d.oggstr"
+
+[deps]
+
+source_file="res://Áudios/8-Bit Arcade - Old Town Road (8-Bit Lil Nas X & Billy Ray Cyrus Emulation).ogg"
+dest_files=[ "res://.import/8-Bit Arcade - Old Town Road (8-Bit Lil Nas X & Billy Ray Cyrus Emulation).ogg-74ad19c37784fa3a97904e9f5ba1e36d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
